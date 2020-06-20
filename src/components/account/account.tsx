@@ -2,12 +2,13 @@ import React from "react";
 import { accountData } from "../../data/accountData";
 
 import "./account.scss"
+import Transactions from "../transactions/transactions";
 
 const Account = ({ accountData }) => {
 
-    const { provider, balance } = accountData as accountData;
+    const { provider, balance, transactions }: accountData = accountData;
 
-    return (
+    return <>
         <section className="account">
             <div className="account-details">
                 <h2>
@@ -27,7 +28,8 @@ const Account = ({ accountData }) => {
                 Balance: {balance.amount}
             </div>
         </section>
-    );
+        <Transactions transactions={transactions} />
+    </>
 }
 
 export default Account;
