@@ -18,10 +18,10 @@ const Account = ({ accountData }) => {
                     {provider.description}
                 </p>
                 <div>
-                    account number: {provider.account_number}
+                    Account number: {provider.account_number}
                 </div>
                 <div>
-                    sort code: {provider.sort_code}
+                    Sort code: {provider.sort_code}
                 </div>
             </div>
             <div className="account-balance">

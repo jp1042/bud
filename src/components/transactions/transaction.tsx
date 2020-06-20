@@ -56,6 +56,7 @@ const Transaction = ({ transaction }) => {
         <>
             <section
                 className="transaction"
+                tabIndex={1}
                 onClick={(e) => { e.preventDefault(); setDisplayDetail(!displayDetail) }}
             >
                 <div className="type">
@@ -66,11 +67,11 @@ const Transaction = ({ transaction }) => {
                 </div>
                 <div className="info">
                     <div>{description}</div>
-                    <div>{date}</div>
+                    <div className="date">{date}</div>
                 </div>
                 <div className="amount">
                     {renderArrow(amount.value)}
-                    <div>£{amount.value}</div>
+                    <div>- £{amount.value * -1}</div>
                 </div>
             </section>
             {displayDetail &&

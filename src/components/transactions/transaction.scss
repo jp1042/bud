@@ -1,5 +1,6 @@
 .transaction {
     display: flex;
+    cursor: pointer;
     align-items: center;
     width: 60%;
     margin: 1rem auto;
@@ -37,6 +38,10 @@
         justify-content: space-between;
         padding-left: 2rem;
         width: 70%;
+
+        .date {
+            color: grey;
+        }
     }
 
     .amount {
@@ -48,6 +53,9 @@
 
         .arrow-icon {
             font-size: 2rem;
+            top: .4rem;
+            position: relative;
+            margin-right: 1rem;
 
             &.left {
                 color: green;

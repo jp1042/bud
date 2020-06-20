@@ -1,19 +1,20 @@
 import React from "react";
 import Transaction from "./transaction";
-
-import { transaction } from "../../data/accountData";
+import {
+    filterExpendature,
+    sortByLowestExpendature,
+    sortByDate
+} from "../../data/transactionDataSort";
 
 const Transactions = ({ transactions }) => {
     const Moment = require('moment');
 
-    const expendatureFilteredTransactions: transaction[] = transactions.filter(t => Math.sign(t.amount.value) === -1);
+    const expendatureFilteredTransactions = filterExpendature(transactions);
 
-    const valueSortedTransactions: transaction[] = expendatureFilteredTransactions.sort((b, a) => a.amount.value - b.amount.value);
+    const valueSortedTransactions = sortByLowestExpendature(expendatureFilteredTransactions);
     valueSortedTransactions.length = 10;
 
-    const dateSortedTransactions: transaction[] = valueSortedTransactions.sort((a, b) =>
-        new Moment(a.date).format('YYYYMMDD') - new Moment(b.date).format('YYYYMMDD')
-    );
+    const dateSortedTransactions = sortByDate(valueSortedTransactions, Moment);
 
     return (
         <section className="transactions">
