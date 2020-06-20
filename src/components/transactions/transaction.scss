@@ -1,16 +1,61 @@
 .transaction {
     display: flex;
+    align-items: center;
     width: 60%;
-    margin: 0 auto;
+    margin: 1rem auto;
     border: 1px solid lightgrey;
-    padding: 2rem;
+    justify-content: space-between;
+    border-radius: 1rem;
+    transition: .25s ease;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
 
-    div {
-        margin-left: 1rem;
+    &:hover,&:focus {
+        outline: none;
+        box-shadow: 1px 10px 5px 0px rgba(0,0,0,.15);
     }
 
-    &:last-of-type {
-        justify-items: flex-end;
+    .type {
+        display: flex;
+        flex-direction: column;
+        width: 10rem;
+        border-right: 1px solid lightgrey;
+        padding: 1rem;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.2rem;
     }
-    
+
+    .icon {
+        margin-top: 1rem;
+        font-size: 3rem;
+        color: #333;
+    }
+
+    .info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 2rem;
+        width: 70%;
+    }
+
+    .amount {
+        display: flex;
+        width: 20%;
+        align-items: center;
+        justify-content: space-around;
+        padding: 2rem;
+
+        .arrow-icon {
+            font-size: 2rem;
+
+            &.left {
+                color: green;
+            }
+
+            &.right {
+                color: red;
+            }
+        }
+    }
 }

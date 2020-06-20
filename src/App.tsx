@@ -13,7 +13,6 @@ const App = () => {
             .then(response => response.json())
             .then(data => {
                 setAccountData(data);
-                console.log(data);
             });
     }, []);
 

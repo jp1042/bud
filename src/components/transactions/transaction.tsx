@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { transaction } from "../../data/accountData";
 import {
     FaShoppingBag,
@@ -7,13 +7,17 @@ import {
     FaPizzaSlice,
     FaLemon,
     FaCashRegister,
-    FaMoneyBill
+    FaMoneyBill,
+    FaArrowLeft,
+    FaArrowRight
 } from 'react-icons/fa';
 
 import "./transaction.scss"
 
 const Transaction = ({ transaction }) => {
     const { id, date, description, category_title, amount }: transaction = transaction;
+
+    const [displayDetail, setDisplayDetail] = useState(false);
 
     const renderIcon = () => {
         switch (category_title) {
@@ -36,15 +40,34 @@ const Transaction = ({ transaction }) => {
         }
     }
 
+    const renderArrow = (amount) => {
+        if (Math.sign(amount) === 1) {
+            return <div className="arrow-icon left">
+                <FaArrowLeft />
+            </div>
+        }
+
+        return <div className="arrow-icon right">
+            <FaArrowRight />
+        </div>
+    }
+
     return (
         <section className="transaction">
-            <div>{category_title}</div>
-            <div className="icon">
-                {renderIcon()}
+            <div className="type">
+                <div>{category_title}</div>
+                <div className="icon">
+                    {renderIcon()}
+                </div>
             </div>
-            <div>{date}</div>
-            <div>{description}</div>
-            <div className="amount">{amount.value}</div>
+            <div className="info">
+                <div>{description}</div>
+                <div>{date}</div>
+            </div>
+            <div className="amount">
+                {renderArrow(amount.value)}
+                <div>£{amount.value}</div>
+            </div>
         </section>
     );
 }

@@ -25,7 +25,7 @@ const Account = ({ accountData }) => {
                 </p>
             </div>
             <div className="account-balance">
-                Balance: {balance.amount}
+                Balance: £{balance.amount}
             </div>
         </section>
         <Transactions transactions={transactions} />

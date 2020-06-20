@@ -23,7 +23,7 @@ export type transaction = {
     description: string
     category_title: string;
     amount: {
-        value: string;
+        value: number;
         currency_iso: string;
     };
 }
