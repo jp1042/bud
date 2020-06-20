@@ -14,18 +14,21 @@ const Account = ({ accountData }) => {
                 <h2>
                     {provider.title}
                 </h2>
-                <div>
-                    {provider.account_number}
-                </div>
-                <div>
-                    {provider.sort_code}
-                </div>
                 <p>
                     {provider.description}
                 </p>
+                <div>
+                    account number: {provider.account_number}
+                </div>
+                <div>
+                    sort code: {provider.sort_code}
+                </div>
             </div>
             <div className="account-balance">
-                Balance: £{balance.amount}
+                Balance
+                    <div className="value">
+                    £{balance.amount}
+                </div>
             </div>
         </section>
         <Transactions transactions={transactions} />

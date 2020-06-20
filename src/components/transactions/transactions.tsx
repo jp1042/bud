@@ -19,7 +19,7 @@ const Transactions = ({ transactions }) => {
     return (
         <section className="transactions">
             {dateSortedTransactions.map(transaction => {
-                return <Transaction transaction={transaction} />
+                return <Transaction key={transaction.id} transaction={transaction} />
             })}
         </section>
     );

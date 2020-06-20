@@ -58,4 +58,46 @@
             }
         }
     }
+
+    @media only screen and (max-width: 768px) {
+        font-size: 1.2rem;
+        width: auto;
+        margin: 1rem;
+
+        .type {
+            font-size: .7rem;
+        }
+
+        .amount {
+            width: 40%;
+        }
+    }  
+}
+
+.transaction-detail {    
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: -2rem;
+    border: 1px solid lightgrey;
+    justify-content: center;
+    border-radius: 0 0 1rem 1rem;
+    position: relative;
+    transition: .25s ease;
+    background: white;
+    padding: 1rem;
+
+    &:hover,&:focus {
+        outline: none;
+        box-shadow: 1px 10px 5px 0px rgba(0,0,0,.15);
+    }
+
+    @media only screen and (max-width: 768px) {
+
+        font-size: .8rem;
+        width: auto;
+        margin: 1rem;
+        margin-top: -2rem;
+    }  
 }

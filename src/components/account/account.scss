@@ -9,4 +9,30 @@
     background: #fe4e57;
     color: white;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .account-balance {
+        font-size: 2rem;
+
+        .value {
+            font-size: 4rem;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        width: auto;
+        margin: 1rem;
+
+        .account-balance {
+            font-size: 2rem;
+
+            .value {
+                font-size: 3rem;
+            }
+        }
+    }   
 }

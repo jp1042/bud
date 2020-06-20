@@ -53,22 +53,35 @@ const Transaction = ({ transaction }) => {
     }
 
     return (
-        <section className="transaction">
-            <div className="type">
-                <div>{category_title}</div>
-                <div className="icon">
-                    {renderIcon()}
+        <>
+            <section
+                className="transaction"
+                onClick={(e) => { e.preventDefault(); setDisplayDetail(!displayDetail) }}
+            >
+                <div className="type">
+                    <div>{category_title}</div>
+                    <div className="icon">
+                        {renderIcon()}
+                    </div>
                 </div>
-            </div>
-            <div className="info">
-                <div>{description}</div>
-                <div>{date}</div>
-            </div>
-            <div className="amount">
-                {renderArrow(amount.value)}
-                <div>£{amount.value}</div>
-            </div>
-        </section>
+                <div className="info">
+                    <div>{description}</div>
+                    <div>{date}</div>
+                </div>
+                <div className="amount">
+                    {renderArrow(amount.value)}
+                    <div>£{amount.value}</div>
+                </div>
+            </section>
+            {displayDetail &&
+                <section
+                    className="transaction-detail"
+                    onClick={(e) => { e.preventDefault(); setDisplayDetail(!displayDetail) }}
+                >
+                    id: {id}
+                </section>
+            }
+        </>
     );
 }
 
