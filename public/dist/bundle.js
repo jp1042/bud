@@ -261,7 +261,31 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _style_resets_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style/_resets.scss */ \"./src/style/_resets.scss\");\n/* harmony import */ var _style_resets_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_resets_scss__WEBPACK_IMPORTED_MODULE_1__);\n\n\nvar App = function () {\n    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", { className: \"app\" },\n        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"header\", { className: \"App-header\" }, \"Bud\")));\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (App);\n\n\n//# sourceURL=webpack:///./src/App.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _style_resets_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style/_resets.scss */ \"./src/style/_resets.scss\");\n/* harmony import */ var _style_resets_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_resets_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _components_navigation_navigation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/navigation/navigation */ \"./src/components/navigation/navigation.tsx\");\n/* harmony import */ var _components_account_account__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/account/account */ \"./src/components/account/account.tsx\");\n\n\n\n\nvar App = function () {\n    var _a = Object(react__WEBPACK_IMPORTED_MODULE_0__[\"useState\"])(null), accountData = _a[0], setAccountData = _a[1];\n    Object(react__WEBPACK_IMPORTED_MODULE_0__[\"useEffect\"])(function () {\n        fetch(\"http://www.mocky.io/v2/5c62e7c33000004a00019b05\")\n            .then(function (response) { return response.json(); })\n            .then(function (data) {\n            setAccountData(data);\n            console.log(data);\n        });\n    }, []);\n    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", { className: \"app\" },\n        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_navigation_navigation__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null),\n        accountData &&\n            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_account_account__WEBPACK_IMPORTED_MODULE_3__[\"default\"], { accountData: accountData })));\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (App);\n\n\n//# sourceURL=webpack:///./src/App.tsx?");
+
+/***/ }),
+
+/***/ "./src/components/account/account.tsx":
+/*!********************************************!*\
+  !*** ./src/components/account/account.tsx ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar Account = function (_a) {\n    var accountData = _a.accountData;\n    var provider = accountData.provider;\n    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"section\", { className: \"account\" },\n        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"h2\", null, provider.title),\n        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, provider.account_number),\n        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, provider.sort_code),\n        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"p\", null, provider.description)));\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Account);\n\n\n//# sourceURL=webpack:///./src/components/account/account.tsx?");
+
+/***/ }),
+
+/***/ "./src/components/navigation/navigation.tsx":
+/*!**************************************************!*\
+  !*** ./src/components/navigation/navigation.tsx ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar Navigation = function () {\n    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"nav\", { className: \"nav\" }, \"Bud\"));\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Navigation);\n\n\n//# sourceURL=webpack:///./src/components/navigation/navigation.tsx?");
 
 /***/ }),
 
