@@ -9,7 +9,7 @@ run 'npm i'
 ```
 
 ```
-then run 'npm build'
+then 'npm run build'
 ```
 
 Navigate to ~bud/server/app.js 
@@ -25,5 +25,5 @@ go to [localhost:8080](http://localhost:8080/) to see the app :)
 From the bud project folder:
 
 ```
-run 'npm run test'
+'npm run test'
 ```
