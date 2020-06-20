@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import Transaction from "./transaction";
 
-import "./transactions.scss"
 import { transaction } from "../../data/accountData";
 
 const Transactions = ({ transactions }) => {

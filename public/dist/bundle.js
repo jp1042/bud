@@ -119,17 +119,6 @@ eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../.
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/transactions/transactions.scss":
-/*!************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/transactions/transactions.scss ***!
-  \************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \"\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/components/transactions/transactions.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style/_resets.scss":
 /*!*************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style/_resets.scss ***!
@@ -1934,17 +1923,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 
 /***/ }),
 
-/***/ "./src/components/transactions/transactions.scss":
-/*!*******************************************************!*\
-  !*** ./src/components/transactions/transactions.scss ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/sass-loader/dist/cjs.js!./transactions.scss */ \"./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/transactions/transactions.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\n\n\nmodule.exports = content.locals || {};\n\n//# sourceURL=webpack:///./src/components/transactions/transactions.scss?");
-
-/***/ }),
-
 /***/ "./src/components/transactions/transactions.tsx":
 /*!******************************************************!*\
   !*** ./src/components/transactions/transactions.tsx ***!
@@ -1953,7 +1931,7 @@ eval("var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _transaction__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./transaction */ \"./src/components/transactions/transaction.tsx\");\n/* harmony import */ var _transactions_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./transactions.scss */ \"./src/components/transactions/transactions.scss\");\n/* harmony import */ var _transactions_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_transactions_scss__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\nvar Transactions = function (_a) {\n    var transactions = _a.transactions;\n    var Moment = __webpack_require__(/*! moment */ \"./node_modules/moment/moment.js\");\n    var expendatureFilteredTransactions = transactions.filter(function (t) { return Math.sign(t.amount.value) === -1; });\n    var valueSortedTransactions = expendatureFilteredTransactions.sort(function (b, a) { return a.amount.value - b.amount.value; });\n    valueSortedTransactions.length = 10;\n    var dateSortedTransactions = valueSortedTransactions.sort(function (a, b) {\n        return new Moment(a.date).format('YYYYMMDD') - new Moment(b.date).format('YYYYMMDD');\n    });\n    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"section\", { className: \"transactions\" }, dateSortedTransactions.map(function (transaction) {\n        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_transaction__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { key: transaction.id, transaction: transaction });\n    })));\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Transactions);\n\n\n//# sourceURL=webpack:///./src/components/transactions/transactions.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _transaction__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./transaction */ \"./src/components/transactions/transaction.tsx\");\n\n\nvar Transactions = function (_a) {\n    var transactions = _a.transactions;\n    var Moment = __webpack_require__(/*! moment */ \"./node_modules/moment/moment.js\");\n    var expendatureFilteredTransactions = transactions.filter(function (t) { return Math.sign(t.amount.value) === -1; });\n    var valueSortedTransactions = expendatureFilteredTransactions.sort(function (b, a) { return a.amount.value - b.amount.value; });\n    valueSortedTransactions.length = 10;\n    var dateSortedTransactions = valueSortedTransactions.sort(function (a, b) {\n        return new Moment(a.date).format('YYYYMMDD') - new Moment(b.date).format('YYYYMMDD');\n    });\n    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"section\", { className: \"transactions\" }, dateSortedTransactions.map(function (transaction) {\n        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_transaction__WEBPACK_IMPORTED_MODULE_1__[\"default\"], { key: transaction.id, transaction: transaction });\n    })));\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Transactions);\n\n\n//# sourceURL=webpack:///./src/components/transactions/transactions.tsx?");
 
 /***/ }),
 
