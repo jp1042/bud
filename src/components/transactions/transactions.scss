@@ -1,0 +1,8 @@
+.transactions {
+    height: 50rem;
+    overflow: scroll;
+
+    @media only screen and (max-width: 768px) {
+        height: 40rem;
+    } 
+}

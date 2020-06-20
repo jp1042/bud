@@ -6,6 +6,8 @@ import {
     sortByDate
 } from "../../data/transactionDataSort";
 
+import "./transactions.scss";
+
 const Transactions = ({ transactions }) => {
     const Moment = require('moment');
 
