@@ -1,9 +1,13 @@
 import React from "react";
 
+import "./navigation.scss"
+
 const Navigation = () => {
     return (
         <nav className="nav">
-            Bud
+            <div className="title">
+                Bud
+            </div>
         </nav>
     );
 }

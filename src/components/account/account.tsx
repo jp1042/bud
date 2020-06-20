@@ -1,24 +1,31 @@
 import React from "react";
 import { accountData } from "../../data/accountData";
 
+import "./account.scss"
+
 const Account = ({ accountData }) => {
 
-    const { provider } = accountData as accountData;
+    const { provider, balance } = accountData as accountData;
 
     return (
         <section className="account">
-            <h2>
-                {provider.title}
-            </h2>
-            <div>
-                {provider.account_number}
+            <div className="account-details">
+                <h2>
+                    {provider.title}
+                </h2>
+                <div>
+                    {provider.account_number}
+                </div>
+                <div>
+                    {provider.sort_code}
+                </div>
+                <p>
+                    {provider.description}
+                </p>
             </div>
-            <div>
-                {provider.sort_code}
+            <div className="account-balance">
+                Balance: {balance.amount}
             </div>
-            <p>
-                {provider.description}
-            </p>
         </section>
     );
 }

@@ -1,0 +1,14 @@
+.nav {
+    height: 4rem;
+    width: 100%;
+    position: sticky;
+    background: black;
+    display: flex;
+    align-items: center;
+
+    .title {
+        margin-left: 4rem;
+        color: white;
+        font-size: 2rem;
+    }
+}
