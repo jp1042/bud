@@ -20,7 +20,7 @@
         "react-flip-move": "^3.0.4",
         "react-hot-loader": "^4.12.20",
         "react-icons": "^3.10.0",
-        "react-scripts": "3.4.1",
+        "react-scripts": "5.0.1",
         "ts-jest": "^26.1.0",
         "typescript": "^3.7.5"
     },
@@ -55,7 +55,7 @@
         "css-loader": "^3.5.2",
         "html-webpack-plugin": "^4.2.0",
         "html-webpack-template": "^6.2.0",
-        "node-sass": "^4.13.1",
+        "node-sass": "^9.0.0",
         "prettier": "^2.0.4",
         "sass-loader": "^8.0.2",
         "style-loader": "^1.1.3",
